@@ -28,9 +28,9 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Install needed OS packages for pycurl
-      if: matrix.os == 'ubuntu-latest'
-      run: sudo apt-get install -y libcurl4-openssl-dev libssl-dev python3-dev
+    #- name: Install needed OS packages for pycurl
+    #  if: matrix.os == 'ubuntu-latest'
+    #  run: sudo apt-get install -y libcurl4-openssl-dev libssl-dev python3-dev
 
     - name: Install Python dependencies
       run: |
@@ -39,4 +39,5 @@ jobs:
 
     - name: Test with PyTest
       run: |
-        python pycurl-example.py
+        #python pycurl-example.py
+        python requests-example.py
